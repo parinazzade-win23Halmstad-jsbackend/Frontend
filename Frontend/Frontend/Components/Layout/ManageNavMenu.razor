@@ -1,0 +1,37 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using Frontend.Data
+
+@inject SignInManager<ApplicationUser> SignInManager
+<nav>
+<NavLink href="/account/details" class="btn btn-theme" Match="NavLinkMatch.All"><i class="fa-regular fa-cog"></i>Account Details</NavLink>
+<ul class="nav nav-pills flex-column">
+    <li class="nav-item">
+        <NavLink class="nav-link"  Match="NavLinkMatch.All">Security</NavLink>
+    </li>
+    <li class="nav-item">
+        <NavLink class="nav-link" >Notifications</NavLink>
+    </li>
+    <li class="nav-item">
+        <NavLink class="nav-link" >Messages</NavLink>
+    </li>
+   
+    <li class="nav-item">
+            <NavLink class="nav-link" >Saved Items</NavLink>
+     </li>
+    
+    <li class="nav-item">
+        <NavLink @onclick="HandleSignOut" class="nav-link"><i class="fa-regular fa-arrow-left-from-bracket"></i>Sign Out</NavLink>
+    </li>
+    
+</ul>
+</nav>
+
+
+@code {
+    private async Task HandleSignOut()
+    {
+        await SignInManager.SignOutAsync();
+    }
+
+ 
+}
