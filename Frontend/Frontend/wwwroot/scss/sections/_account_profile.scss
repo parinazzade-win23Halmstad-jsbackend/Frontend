@@ -17,13 +17,16 @@
 
 
             nav {
-                .btn-bottuns {
+                .btn btn-theme {
                     width: 18%;
+                    gap: 10px;
                 }
 
                 .nav nav-pills flex-column {
-                    .nav-link{ text-decoration: none;
-                    color: gray;}
+                    .nav-link {
+                        text-decoration: none;
+                        color: gray;
+                    }
                 }
             }
 

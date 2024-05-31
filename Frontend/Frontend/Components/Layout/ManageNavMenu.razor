@@ -4,26 +4,13 @@
 @inject SignInManager<ApplicationUser> SignInManager
 <nav>
 <NavLink href="/account/details" class="btn btn-theme" Match="NavLinkMatch.All"><i class="fa-regular fa-cog"></i>Account Details</NavLink>
-<ul class="nav nav-pills flex-column">
-    <li class="nav-item">
-        <NavLink class="nav-link"  Match="NavLinkMatch.All">Security</NavLink>
-    </li>
-    <li class="nav-item">
-        <NavLink class="nav-link" >Notifications</NavLink>
-    </li>
-    <li class="nav-item">
-        <NavLink class="nav-link" >Messages</NavLink>
-    </li>
-   
-    <li class="nav-item">
-            <NavLink class="nav-link" >Saved Items</NavLink>
-     </li>
+    <NavLink href="/account/Security" class="btn btn-theme" Match="NavLinkMatch.All"><i class="fa-light fa-lock"></i>Security</NavLink>
+    <NavLink href="/account/Notifications" class="btn btn-theme" Match="NavLinkMatch.All"><i class="fa-sharp fa-light fa-bell"></i>Notifications</NavLink>
+    <NavLink href="/account/Messages" class="btn btn-theme" Match="NavLinkMatch.All"><i class="fa-light fa-messages"></i>Messages</NavLink>
+    <NavLink href="/account/Saved Items" class="btn btn-theme" Match="NavLinkMatch.All"><i class="fa-light fa-bookmark"></i>Saved Items</NavLink>
+    <NavLink @onclick="HandleSignOut" class="btn btn-theme"><i class="fa-regular fa-arrow-left-from-bracket"></i>Sign Out</NavLink>
     
-    <li class="nav-item">
-        <NavLink @onclick="HandleSignOut" class="nav-link"><i class="fa-regular fa-arrow-left-from-bracket"></i>Sign Out</NavLink>
-    </li>
-    
-</ul>
+
 </nav>
 
 

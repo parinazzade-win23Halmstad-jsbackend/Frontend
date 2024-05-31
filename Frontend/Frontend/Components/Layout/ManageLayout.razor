@@ -15,12 +15,7 @@
                 <h2>Account Details</h2>
                 <h5>Basic Info</h5>
             </div>
-        @*     @if (!string.IsNullOrEmpty(TempData["StatusMessage"]?.ToString()))
-            {
-                <div class="alert alert-danger">
-                    @TempData["StatusMessage"]
-                </div>
-            } *@
+        
 
             <EditForm class="form-basic" Model="Basic" OnValidSubmit="UpdateBasicInfo">
                 <div class="form-content">

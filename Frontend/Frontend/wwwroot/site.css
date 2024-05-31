@@ -631,8 +631,9 @@ form .validation-message {
   width: 150px;
   height: 150px;
 }
-.account-profile .container aside nav .btn-bottuns {
+.account-profile .container aside nav .btn btn-theme {
   width: 18%;
+  gap: 10px;
 }
 .account-profile .container aside nav .nav nav-pills flex-column .nav-link {
   text-decoration: none;
